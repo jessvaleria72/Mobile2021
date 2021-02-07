@@ -1,0 +1,6 @@
+2. 
+a dan b. Langsung keluar dari aplikasi
+Hal ini mungkin terjadi karena aplikasi tidak dapat menangani kekosongan dari angka1 dan/atau angka2, sedangkan program dirancang menerima input angka1 dan/atau angka2. Ketika program tidak menerima input, maka program bingung dan langsung berhenti. Penanganan yang mungkin dapat dilakukan yaitu memastikan untuk memberikan input pada angka1 dan angka2. Selain itu, mungkin dapat dilakukan penyisipan exception handling pada program ketika tidak menerima input pada angka1 dan angka2. 
+
+c. Menampilkan hasil infinity
+Terjadi karena bilangan dibagi dengan 0 yang menghasilkan infinity. Sebaiknya, hindari pembagian dengan 0, atau dapat dilakukan penggunaan exception handling pada program ketika menerima input angka2 adalah 0.
