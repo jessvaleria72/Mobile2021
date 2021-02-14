@@ -1,0 +1,2 @@
+1. Ketika floating button diklik, maka akan menambahkan list kata dengan keterangan "Kata .. telah ditambahkan". Posisi layar juga langsung tertuju ke paling bawah (posisi kata ditambahkan).
+2. Ketika kata diklik, maka akan muncul keterangan "Kata .. pernah diklik".
