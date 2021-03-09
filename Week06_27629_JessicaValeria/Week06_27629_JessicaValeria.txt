@@ -1,0 +1,3 @@
+A. Pada aplikasi, ketika diklik akan menampilkan bubble yang dapat membesar hingga ukuran maksimum tertentu, lalu mengecil.
+B. Pada aplikasi akan menampilkan kuda yang sedang berlari (kumpulan gambar yang bergerak sehingga tampak seperti animasi).
+C. Ketika tombol Halo Spring diklik, maka tombol akan memantul ke arah tombol fling (bawah). Sedangkan pada tombol fling, akan bergerak memutar ke arah spring (atas).
