@@ -1,0 +1,2 @@
+Pada aktivitas 7A, dapat dilakukan pengambilan foto dan video melalui tombol yang tersedia.
+Sedangkan pada aktivitas 7B, dapat ditampilkan list video dan video tersebut dapat diputar pada halaman terpisah. Video disajikan bersamaan dengan keterangannya.
