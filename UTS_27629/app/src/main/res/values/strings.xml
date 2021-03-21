@@ -1,0 +1,17 @@
+<resources>
+    <string name="judul">Profil Saya</string>
+    <string name="app_name">My Music Player</string>
+    <string name="nim">NIM : 00000027629</string>
+    <string name="nama">Nama : Jessica Valeria</string>
+    <string name="kelas">Kelas : DL</string>
+    <string name="referensi">Referensi : </string>
+    <string name="referensi6">Youtube : </string>
+    <string name="referensi1">https://www.youtube.com/watch?v=q7TETeyChhw </string>
+    <string name="referensi2">https://www.youtube.com/watch?v=IauxP5xgu_s&amp;list=PLwQLA73lSe1RfjMzbRLoIkcIJBu25FnVJ&amp;index=2</string>
+    <string name="referensi7">https://www.youtube.com/watch?v=oh4YOj9VkVE </string>
+    <string name="referensi3">Website : </string>
+    <string name="referensi4">https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml </string>
+    <string name="referensi5">Teman : Louis Fernando Yanto Wang</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
