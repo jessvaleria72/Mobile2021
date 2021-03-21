@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/mContainer"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    tools:context=".PlayerActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_top_btn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/gradient_bg"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_left"
+            android:clickable="true"
+            android:onClick="backBtnClicked"/>
+
+        <TextView
+            android:layout_width="351dp"
+            android:layout_height="50dp"
+            android:layout_toStartOf="@+id/menu_btn"
+            android:layout_toEndOf="@+id/back_btn"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:text="Now Playing"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/card"
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout_top_btn">
+
+        <ImageView
+            android:id="@+id/cover_art"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_music_waves" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/imageViewGradient"
+            android:src="@drawable/gradient_bg"
+            android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="This is song Name"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/song_name"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="This is song Artist"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/seek_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/linear_layout_for_bottom"
+        android:layout_marginBottom="10dp"
+        tools:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/durationPlayed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:text="1:28"
+            android:textColor="@color/cardview_light_background" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp" />
+
+        <TextView
+            android:id="@+id/durationTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="4:28"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gradient_bg"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:id="@+id/id_shuffle"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/ic_shuffleoff" />
+
+        <ImageView
+            android:id="@+id/id_prev"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/play_pause"
+            android:src="@drawable/ic_skip_previous" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_play_arrow"
+            app:backgroundTint="@color/white"
+            app:maxImageSize="30dp"
+            app:tint="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/id_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/play_pause"
+            android:src="@drawable/ic_skip_next_" />
+
+        <ImageView
+            android:id="@+id/id_repeat"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_repeat_off" />
+    </LinearLayout>
+
+</LinearLayout>
