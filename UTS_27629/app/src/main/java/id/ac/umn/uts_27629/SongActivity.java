@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -32,6 +33,7 @@ public class SongActivity extends AppCompatActivity {
     static ArrayList<MusicFiles> musicFiles;
     static boolean shuffleBoolean = false, repeatBoolean = false;
     private ViewPager viewPager;
+    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +102,8 @@ public class SongActivity extends AppCompatActivity {
                 }
                 return true;
             case R.id.logout:
+                sessionManager = new SessionManager(getApplicationContext());
+                sessionManager.setLogin(false);
                 Intent logoutIntent = new Intent(SongActivity.this, MainActivity.class);
                 if(logoutIntent.resolveActivity(getPackageManager()) != null){
                     startActivity(logoutIntent);
