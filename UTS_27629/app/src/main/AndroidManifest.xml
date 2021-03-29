@@ -16,11 +16,7 @@
         </activity>
         <activity
             android:name=".SongActivity"
-            android:label="Song Lists"
-            android:parentActivityName=".LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity" />
+            android:label="Song Lists">
         </activity>
         <activity
             android:name=".LoginActivity"
