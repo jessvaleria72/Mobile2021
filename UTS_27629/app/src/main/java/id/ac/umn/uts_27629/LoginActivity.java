@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     EditText etUsername, etPassword;
     Button btnLogin;
+    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +23,16 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.et_password);
         btnLogin = findViewById(R.id.btn_login);
 
+        sessionManager = new SessionManager(getApplicationContext());
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(etUsername.getText().toString().equals("uasmobile") &&
-                etPassword.getText().toString().equals("uasmobilegenap")){
+                String sUsername = etUsername.getText().toString().trim();
+                String sPassword = etPassword.getText().toString().trim();
+
+                if(sUsername.equals("uasmobile") && sPassword.equals("uasmobilegenap")){
+                    sessionManager.setLogin(true);
                     AlertDialog.Builder builder = new AlertDialog.Builder(
                             LoginActivity.this
                     );
@@ -49,7 +55,11 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Invalid Username or Password !",
                             Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
+        if(sessionManager.getLogin()){
+            startActivity(new Intent(getApplicationContext(), SongActivity.class));
+        }
     }
 }
